@@ -52,30 +52,54 @@ function getShuffledResults() {
     return Array.from({ length: NUM_DICE }, (_, i) => getRandomDieFace(dice_array[randomPermutation[i]]));
 }
 
-function drawDiceResults(results) {
-    const canvas = document.getElementById('diceCanvas');
-    const ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
 
-    const NUM_DICE_X = 4;
-    const XPITCH = canvas.width / NUM_DICE_X; // Space between dice results horizontally
-    const YPITCH = canvas.height / Math.ceil(results.length / NUM_DICE_X); // Space between dice results vertically
-    const fontSize = Math.floor(0.75*XPITCH); // Font size for the letters
-    ctx.fillTextAlign = 'center';
-    ctx.fillStyle = 'red';
-    ctx.font = `${fontSize}px Arial`;
-    
-    results.forEach((letter, index) => {
-        startX = (index%NUM_DICE_X)*XPITCH;
-        startY = Math.floor(index/NUM_DICE_X)*YPITCH;
-        ctx.fillText(letter, startX, startY+fontSize); // Draw the letter at the calculated position
-    });
+// get the img elements for each die of the board and store them in an array for easy access
+const dieImages = [];
+for (let i = 0; i < NUM_DICE; i++) {
+    const dieImage = document.getElementById(`die_${i.toString().padStart(2, '0')}`);
+    dieImages.push(dieImage);
 }
+
+// check that the number of board dice is as expected
+if (dieImages.length !== NUM_DICE) {
+    throw new Error(`Number of dice images in HTML page does not match expected number of dice.`);
+}
+
+function randomlyRotateDieImage(dieImage) {
+    const randomAngle = Math.floor(Math.random() * 4) * 90; // Randomly choose 0, 90, 180, or 270 degrees
+    dieImage.style.transform = `rotate(${randomAngle}deg)`;
+}
+
 
 function updateResultsCanvas() {
+
     const results = getShuffledResults();
-    drawDiceResults(results);
+
+    // Update the images for each die based on the results
+    for (let i = 0; i < NUM_DICE; i++) {
+        const letter = results[i];
+        const imagePath = `img/letter_${letter}.svg`;
+        dieImages[i].src = imagePath;
+        randomlyRotateDieImage(dieImages[i]);
+    }
+
 }
+
+
 
 //Initially, draw the results on the canvas when the page loads
 window.onload = updateResultsCanvas;
+
+
+//images[0].style.rotate = '90deg';
+//images[0].style.display = 'true';
+//images[1].style.display = 'true';
+//images[2].style.display = 'true';
+//images[3].src = 'img/letter_B.svg';
+//images[3].style.rotate = '90deg';
+
+//images[4].style.display = 'true';
+//images[5].style.display = 'true';
+//images[6].style.display = 'true';
+//images[7].style.display = 'true';
+
