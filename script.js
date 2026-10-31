@@ -71,7 +71,7 @@ function randomlyRotateDieImage(dieImage) {
 }
 
 
-function updateResultsCanvas() {
+function updateResultsBoard() {
 
     const results = getShuffledResults();
 
@@ -88,4 +88,4 @@ function updateResultsCanvas() {
 
 
 //Initially, draw the results on the canvas when the page loads
-window.onload = updateResultsCanvas;
+window.onload = updateResultsBoard;
