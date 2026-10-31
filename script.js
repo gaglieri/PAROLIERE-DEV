@@ -89,17 +89,3 @@ function updateResultsCanvas() {
 
 //Initially, draw the results on the canvas when the page loads
 window.onload = updateResultsCanvas;
-
-
-//images[0].style.rotate = '90deg';
-//images[0].style.display = 'true';
-//images[1].style.display = 'true';
-//images[2].style.display = 'true';
-//images[3].src = 'img/letter_B.svg';
-//images[3].style.rotate = '90deg';
-
-//images[4].style.display = 'true';
-//images[5].style.display = 'true';
-//images[6].style.display = 'true';
-//images[7].style.display = 'true';
-
