@@ -17,37 +17,53 @@
 			padding-top:    2px;
 			padding-bottom: 2px;
 		}
+		.button {
+			border: none;
+			color: black;
+			padding: 8px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 20px;
+			margin: 4px 2px;
+			cursor: pointer;
+			border-radius: 8px;
+		}
 	</style>
 </head>
 <body>
 	
-	<div id="test">
-		<table id="diceTable" style="width:320px; height:80px;">
+	<div id="Dice board" style="margin: 0 auto;">
+		<table id="diceTable" style="width:280px; height:70px;">
 			<tr>
-				<td><img id="die_00" src="img/letter_A.svg" alt="Dice Image" style="width:80px;height:80px;rotate:0deg;display:true;" ></td>
-				<td><img id="die_01" src="img/letter_A.svg" alt="Dice Image" style="width:80px;height:80px;rotate:0deg;display:true;" ></td>
-				<td><img id="die_02" src="img/letter_A.svg" alt="Dice Image" style="width:80px;height:80px;rotate:0deg;display:true;" ></td>
-				<td><img id="die_03" src="img/letter_A.svg" alt="Dice Image" style="width:80px;height:80px;rotate:0deg;display:true;" ></td>
+				<td><img id="die_00" src="img/letter_A.svg" alt="Dice Image" style="width:70px;height:70px;rotate:0deg;display:true;" ></td>
+				<td><img id="die_01" src="img/letter_A.svg" alt="Dice Image" style="width:70px;height:70px;rotate:0deg;display:true;" ></td>
+				<td><img id="die_02" src="img/letter_A.svg" alt="Dice Image" style="width:70px;height:70px;rotate:0deg;display:true;" ></td>
+				<td><img id="die_03" src="img/letter_A.svg" alt="Dice Image" style="width:70px;height:70px;rotate:0deg;display:true;" ></td>
 			</tr>
 			<tr>
-				<td><img id="die_04" src="img/letter_A.svg" alt="Dice Image" style="width:80px;height:80px;rotate:0deg;display:true;" ></td>
-				<td><img id="die_05" src="img/letter_A.svg" alt="Dice Image" style="width:80px;height:80px;rotate:0deg;display:true;" ></td>
-				<td><img id="die_06" src="img/letter_A.svg" alt="Dice Image" style="width:80px;height:80px;rotate:0deg;display:true;" ></td>
-				<td><img id="die_07" src="img/letter_A.svg" alt="Dice Image" style="width:80px;height:80px;rotate:0deg;display:true;" ></td>
+				<td><img id="die_04" src="img/letter_A.svg" alt="Dice Image" style="width:70px;height:70px;rotate:0deg;display:true;" ></td>
+				<td><img id="die_05" src="img/letter_A.svg" alt="Dice Image" style="width:70px;height:70px;rotate:0deg;display:true;" ></td>
+				<td><img id="die_06" src="img/letter_A.svg" alt="Dice Image" style="width:70px;height:70px;rotate:0deg;display:true;" ></td>
+				<td><img id="die_07" src="img/letter_A.svg" alt="Dice Image" style="width:70px;height:70px;rotate:0deg;display:true;" ></td>
 			</tr>
 			<tr>
-				<td><img id="die_08" src="img/letter_A.svg" alt="Dice Image" style="width:80px;height:80px;rotate:0deg;display:true;" ></td>
-				<td><img id="die_09" src="img/letter_A.svg" alt="Dice Image" style="width:80px;height:80px;rotate:0deg;display:true;" ></td>
-				<td><img id="die_10" src="img/letter_A.svg" alt="Dice Image" style="width:80px;height:80px;rotate:0deg;display:true;" ></td>
-				<td><img id="die_11" src="img/letter_A.svg" alt="Dice Image" style="width:80px;height:80px;rotate:0deg;display:true;" ></td>
+				<td><img id="die_08" src="img/letter_A.svg" alt="Dice Image" style="width:70px;height:70px;rotate:0deg;display:true;" ></td>
+				<td><img id="die_09" src="img/letter_A.svg" alt="Dice Image" style="width:70px;height:70px;rotate:0deg;display:true;" ></td>
+				<td><img id="die_10" src="img/letter_A.svg" alt="Dice Image" style="width:70px;height:70px;rotate:0deg;display:true;" ></td>
+				<td><img id="die_11" src="img/letter_A.svg" alt="Dice Image" style="width:70px;height:70px;rotate:0deg;display:true;" ></td>
 			</tr>
 			<tr>
-				<td><img id="die_12" src="img/letter_A.svg" alt="Dice Image" style="width:80px;height:80px;rotate:0deg;display:true;" ></td>
-				<td><img id="die_13" src="img/letter_A.svg" alt="Dice Image" style="width:80px;height:80px;rotate:0deg;display:true;" ></td>
-				<td><img id="die_14" src="img/letter_A.svg" alt="Dice Image" style="width:80px;height:80px;rotate:0deg;display:true;" ></td>
-				<td><img id="die_15" src="img/letter_A.svg" alt="Dice Image" style="width:80px;height:80px;rotate:0deg;display:true;" ></td>
+				<td><img id="die_12" src="img/letter_A.svg" alt="Dice Image" style="width:70px;height:70px;rotate:0deg;display:true;" ></td>
+				<td><img id="die_13" src="img/letter_A.svg" alt="Dice Image" style="width:70px;height:70px;rotate:0deg;display:true;" ></td>
+				<td><img id="die_14" src="img/letter_A.svg" alt="Dice Image" style="width:70px;height:70px;rotate:0deg;display:true;" ></td>
+				<td><img id="die_15" src="img/letter_A.svg" alt="Dice Image" style="width:70px;height:70px;rotate:0deg;display:true;" ></td>
 			</tr>
 		</table>
+	</div>
+
+	<div id="Controls" style="margin: 0 auto; text-align:center; padding-top: 10px;">
+		<button id="rollButton" onclick="updateResultsBoard()" class="button">MESCOLA</button>
 	</div>
 
 	<script src="script.js"></script>
