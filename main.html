@@ -7,6 +7,9 @@
 	<style>
 		body {
 			font-family: Arial, sans-serif;
+			background-image: url('img/background-green.svg');
+			background-size: auto;
+			background-repeat: repeat;
 		}
 		table {
   			margin: 0 auto;
@@ -19,7 +22,10 @@
 		}
 		.button {
 			border: none;
-			color: black;
+			color: white;
+			background-image: linear-gradient(to right, #FF512F 0%, #F09819 51%, #FF512F 100%);
+			transition: 0.5s;
+  			background-size: 200% auto;
 			padding: 8px 20px;
 			text-align: center;
 			text-decoration: none;
@@ -28,6 +34,10 @@
 			margin: 4px 2px;
 			cursor: pointer;
 			border-radius: 8px;
+			border: none;
+		}
+		.button:hover {
+			background-position: right center;
 		}
 	</style>
 </head>
